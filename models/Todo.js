@@ -9,6 +9,16 @@ const TodoSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  created_at: {
+    type: Date,
+    required: true,
+    default: Date.now
+  },
+  count: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
   userId: {
     type: String,
     required: true

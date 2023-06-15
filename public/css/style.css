@@ -1,10 +1,61 @@
+html{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: url(images/water.png) no-repeat center center fixed;
+}
 h1{
-    color: red;
+    margin-top: 8%;
+    color: white;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px black;
+}
+h2{
+    font-size: 20px;
+    color: skyblue;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+
+}
+ul{
+    font-size: 18px;
+    font-weight: 300;
+    list-style: none;
+}
+li{
+    margin: .75%;
+    color: white;
 }
 .completed{
     text-decoration: line-through;
-    color: gray;
+    color: black;
+    font-weight: 400;
 }
 .not{
     text-decoration: underline;
+}
+.count{
+    background-color: pink;
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: .2%;
+    margin: .5%;
+    color: gray;
+    font-weight: 300;
+}
+p{
+    font-size: 14px;
+    color: white;
+    margin: 1.5% 20% 3% 20%;
+}
+.logout{
+    text-decoration: none;
+    color: azure;
+}
+.del {
+    margin: .1% 1% .1% 1%;
 }

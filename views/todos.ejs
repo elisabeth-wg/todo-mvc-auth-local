@@ -5,27 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
+    <h1>Your Good Things</h1>
     <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'> Delete </span>
+                <span class='del'> remove </span>
+                <span class='count'>day count: <%= el.count %></span>
             </li>
     <% }) %>    
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
-
+    <h2><%= user.userName %> has <%= left %> things left to do today.</h2>
+    <h3>After a few days of success add another small item!</h3>
     <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <input type="text" placeholder="Add One Good Thing" name='todoItem'>
         <input type="submit">
     </form>
 
-    <a href="/logout">Logout</a>
+    <a href="/logout" class="logout">Logout</a>
+
+    <p>"So, what if, instead of thinking about solving you whole life, you just think about adding additional good things. One
+    at a time. Just let your pile of good things grow.” - Rainbow Rowell</p>
 
     <script src="js/main.js"></script>
 </body>
